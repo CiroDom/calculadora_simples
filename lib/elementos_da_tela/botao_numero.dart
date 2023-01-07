@@ -17,7 +17,13 @@ class BotaoNumero extends StatelessWidget {
     return Expanded(
       child: ElevatedButton(
           onPressed: () => teclaApertada(numero),
-          child: Text(numero)),
+          child: Text(
+            numero,
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
+          ),
+      ),
     );
   }
 }

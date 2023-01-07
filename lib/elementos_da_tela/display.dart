@@ -29,9 +29,15 @@ class _DisplayState extends State<Display> {
         elevation: 5.0,
         margin: EdgeInsets.all(20.0),
         child: Align(
-            child: Padding(
-              padding: EdgeInsets.only(top: 20.0,right: 10.0),
-              child: Text(widget.display),
+          alignment: Alignment.bottomRight,
+          child: Padding(
+              padding: EdgeInsets.only(bottom: 15.0,right: 15.0),
+              child: Text(
+                widget.display,
+                style: TextStyle(
+                  fontSize: 25,
+                ),
+              ),
             )),
       ),
     );
