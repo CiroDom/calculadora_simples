@@ -16,12 +16,12 @@ class BotaoNumero extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: const BeveledRectangleBorder(),
+          ),
           onPressed: () => teclaApertada(numero),
           child: Text(
             numero,
-            style: TextStyle(
-              fontSize: 20.0,
-            ),
           ),
       ),
     );

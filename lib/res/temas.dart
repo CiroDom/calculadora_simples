@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 class Temas {
   static ThemeData modo_light = ThemeData(
     brightness: Brightness.light,
-    primarySwatch: Colors.cyan,
+    primarySwatch: Colors.pink,
+    iconTheme: IconThemeData(color: Colors.pink),
   );
 
   static ThemeData modo_dark = ThemeData(
-    brightness: Brightness.light,
-    primarySwatch: Colors.blueGrey,
+    brightness: Brightness.dark,
+    primarySwatch: Colors.pink,
   );
 
 }

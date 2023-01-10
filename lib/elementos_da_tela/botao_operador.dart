@@ -7,10 +7,12 @@ class BotaoOperador extends StatelessWidget {
     Key? key,
     required this.operador,
     required this.teclaApertada,
+    required this. desabilitado,
   }) : super(key: key);
 
   final String operador;
   final OperadorCallback teclaApertada;
+  final bool desabilitado;
   
   IconData? mapOperadorToIcon() {
     switch (operador) {
@@ -27,8 +29,9 @@ class BotaoOperador extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: IconButton(
-          onPressed: () => teclaApertada(operador),
-            icon: Icon(mapOperadorToIcon())
+          onPressed: desabilitado ? null : () => teclaApertada(operador),
+          icon: Icon(mapOperadorToIcon()),
+          iconSize: 20.0,
         )
     );
   }
